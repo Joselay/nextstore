@@ -3,10 +3,10 @@ import { Billboard } from "@/types";
 
 const URL = `${getApiUrlSync()}/billboards`;
 
-const getBillboard = async (id: string): Promise<Billboard> => {
-  const res = await fetch(`${URL}/${id}`);
+const getBillboards = async (): Promise<Billboard[]> => {
+  const res = await fetch(URL);
 
   return res.json();
 };
 
-export default getBillboard;
+export default getBillboards;

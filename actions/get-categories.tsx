@@ -1,6 +1,7 @@
+import { getApiUrlSync } from "@/lib/store";
 import { Category } from "@/types";
 
-const URL = `${process.env.NEXT_PUBLIC_API_URL}/categories`;
+const URL = `${getApiUrlSync()}/categories`;
 
 const getCategories = async (): Promise<Category[]> => {
   const res = await fetch(URL);

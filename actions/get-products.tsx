@@ -1,8 +1,9 @@
 import qs from "query-string";
 
+import { getApiUrlSync } from "@/lib/store";
 import { Product } from "@/types";
 
-const URL = `${process.env.NEXT_PUBLIC_API_URL}/products`;
+const URL = `${getApiUrlSync()}/products`;
 
 interface Query {
   categoryId?: string;
